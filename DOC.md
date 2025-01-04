@@ -1,8 +1,8 @@
-# Dokumentation: Fail2ban Blocklist Loader
+# Dokumentation: IPTABLES Blocklist Loader
 
 ## Einleitung
 
-Der Fail2ban Blocklist Loader ist ein Python-Skript, das automatisch Blocklisten von angegebenen URLs herunterlädt und diese in die iptables-Regeln integriert, um schädliche IP-Adressen und Subnetze zu blockieren. Dieses Dokument beschreibt die Funktionsweise, Konfiguration und Nutzung des Skripts.
+Der IPTABLES Blocklist Loader ist ein Python-Skript, das automatisch Blocklisten von angegebenen URLs herunterlädt und diese in die iptables-Regeln integriert, um schädliche IP-Adressen und Subnetze zu blockieren. Dieses Dokument beschreibt die Funktionsweise, Konfiguration und Nutzung des Skripts.
 
 ---
 
@@ -11,7 +11,7 @@ Der Fail2ban Blocklist Loader ist ein Python-Skript, das automatisch Blocklisten
 ### Module und Funktionen
 
 1. **setup_logging**
-   - Konfiguriert die Logdatei (`fail2ban_blocklist.log`) und das Logging-Format.
+   - Konfiguriert die Logdatei (`blocklist.log`) und das Logging-Format.
    
 2. **download_blocklist**
    - Lädt Blocklisten von angegebenen URLs herunter. Verwendet einen konfigurierbaren Timeout-Wert.
@@ -19,7 +19,7 @@ Der Fail2ban Blocklist Loader ist ein Python-Skript, das automatisch Blocklisten
 3. **parse_blocklist**
    - Validiert und filtert gültige IP-Adressen und Subnetze aus der heruntergeladenen Blockliste.
 
-4. **add_ips_to_fail2ban**
+4. **add_ips_to_iptables**
    - Fügt die validierten IPs/Subnetze zu den iptables-Regeln hinzu.
 
 5. **process_blocklist**
@@ -35,7 +35,7 @@ Der Fail2ban Blocklist Loader ist ein Python-Skript, das automatisch Blocklisten
 
 ## Konfigurationsdatei
 
-Die Blocklisten-URLs werden in einer Datei namens `blocklist_config.json` definiert. Beispiel:
+Die Blocklisten-URLs werden in einer Datei namens `blocklist.json` definiert. Beispiel:
 
 ```json
 {
@@ -60,15 +60,15 @@ Die Blocklisten-URLs werden in einer Datei namens `blocklist_config.json` defini
 
 1. **Skript starten:**
    ```bash
-   python fail2ban_blocklist.py
+   python3 blocklist.py
    ```
 
 2. **Logs überprüfen:**
-   Das Skript protokolliert alle Aktivitäten in `fail2ban_blocklist.log`.
+   Das Skript protokolliert alle Aktivitäten in `blocklist.log`.
 
 ### Fehlerbehebung
 - **Fehler beim Herunterladen:**
-  - Prüfe die URL in der `blocklist_config.json`.
+  - Prüfe die URL in der `blocklist.json`.
   - Stelle sicher, dass der Server erreichbar ist.
 
 - **Fehler bei iptables-Befehlen:**
@@ -79,7 +79,7 @@ Die Blocklisten-URLs werden in einer Datei namens `blocklist_config.json` defini
 
 ## Logdatei
 
-Die Logdatei `fail2ban_blocklist.log` enthält:
+Die Logdatei `blocklist.log` enthält:
 - Erfolge und Fehler beim Herunterladen der Blocklisten.
 - Details zu ungültigen Einträgen.
 - Status der hinzugefügten IP-Adressen/Subnetze.
@@ -97,8 +97,6 @@ Beispiel:
 
 - **Timeout konfigurierbar:** Der Timeout-Wert für HTTP-Anfragen kann angepasst werden.
 - **Mehrere Blocklisten:** Das Skript verarbeitet beliebig viele URLs.
-- **Zukunft:** Integration mit Fail2ban über API-Schnittstellen (z. B. für dynamisches Laden von Blocklisten).
-
 ---
 
 ## Lizenz
