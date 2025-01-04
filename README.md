@@ -70,5 +70,5 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 ## Lizenz
 
-Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der Datei `LICENSE`.
+Dieses Projekt steht unter der GPL-3.0-Lizenz. Weitere Informationen findest du in der Datei `LICENSE`.
 
