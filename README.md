@@ -63,7 +63,7 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 ## Warnhinweise
 
-- Stelle sicher, dass du root-Berechtigungen hast, um `iptables`-Befehle auszuführen.
+- Stelle sicher, dass du root-Berechtigungen hast, um `iptables`,`ip6tables`-Befehle auszuführen.
 - Ungültige IP-Adressen/Subnetze werden automatisch übersprungen und im Log dokumentiert.
 
 ---
