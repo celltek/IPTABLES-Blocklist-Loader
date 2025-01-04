@@ -28,7 +28,7 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 1. **Skript herunterladen:**
    ```bash
-   git clone https://github.com/celltek/Fail2ban-Blocklist-Loader
+   git clone https://github.com/celltek/Fail2ban-Blocklist-Loader.git
    cd fail2ban_blocklist
    ```
 
