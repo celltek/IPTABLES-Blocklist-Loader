@@ -1,8 +1,8 @@
-# Fail2ban Blocklist Loader
+# IPTABLES Blocklist Loader
 
 ## Übersicht
 
-Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Blocklisten für Fail2ban. Es integriert IP-Adressen und Subnetze aus mehreren Quellen in die iptables-Regeln, um schädliche Verbindungen effektiv zu blockieren.
+Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Blocklisten für iptables. Es integriert IP-Adressen und Subnetze aus mehreren Quellen in die iptables-Regeln, um schädliche Verbindungen effektiv zu blockieren.
 
 ---
 
@@ -28,8 +28,8 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 1. **Skript herunterladen:**
    ```bash
-   git clone https://github.com/celltek/Fail2ban-Blocklist-Loader.git
-   cd fail2ban_blocklist
+   git clone https://github.com/celltek/IPTABLES-Blocklist-Loader.git
+   cd iptables_blocklist
    ```
 
 2. **Abhängigkeiten installieren:**
@@ -38,7 +38,7 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
    ```
 
 3. **Konfigurationsdatei erstellen:**
-   Erstelle eine `blocklist_config.json` im Hauptverzeichnis:
+   Erstelle eine `blocklist.json` im Hauptverzeichnis:
    ```json
    {
        "urls": [
@@ -53,11 +53,11 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 1. **Skript ausführen:**
    ```bash
-   python fail2ban_blocklist.py
+   python blocklist.py
    ```
 
 2. **Logdatei prüfen:**
-   Alle Aktivitäten und Fehler werden in der Datei `fail2ban_blocklist.log` protokolliert.
+   Alle Aktivitäten und Fehler werden in der Datei `blocklist.log` protokolliert.
 
 ---
 
