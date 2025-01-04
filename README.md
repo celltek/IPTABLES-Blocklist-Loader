@@ -42,7 +42,6 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
    ```json
    {
        "urls": [
-           "https://ipv64.net/blocklists/ipv64_blocklist_spamhaus_drop.txt",
            "https://example.com/blocklist.txt"
        ]
    }
