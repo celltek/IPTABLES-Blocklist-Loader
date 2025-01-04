@@ -20,7 +20,7 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 - Python 3.x
 - Module: `requests`, `ipaddress`, `logging`, `subprocess`, `json`
-- Zugriff auf `iptables`
+- Zugriff auf `iptables`, `ip6tables`
 
 ---
 
