@@ -101,5 +101,5 @@ Beispiel:
 
 ## Lizenz
 
-Das Projekt steht unter der MIT-Lizenz. Details sind in der Datei `LICENSE` zu finden.
+Das Projekt steht unter der GPL-3.0-Lizenz. Details sind in der Datei `LICENSE` zu finden.
 
