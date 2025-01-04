@@ -53,7 +53,7 @@ Dieses Skript automatisiert das Herunterladen, Verarbeiten und Anwenden von Bloc
 
 1. **Skript ausführen:**
    ```bash
-   python blocklist.py
+   python3 blocklist.py
    ```
 
 2. **Logdatei prüfen:**
